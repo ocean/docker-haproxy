@@ -1,5 +1,7 @@
 # amazee.io haproxy
 
+## (updated for [pygmy-apple](https://github.com/ocean/pygmy) on Apple Silicon)
+
 This Images is part of the [amazee.io local docker development environment](https://docs.amazee.io/local_docker_development/local_docker_development.html). It provides a haproxy that serves as an reverse proxy in front of multiple Containers. This allows us to access multiple containers via nice URLs without the need to publish or know the ports of the containers.
 
 ## Usage
@@ -16,7 +18,7 @@ By default this Image will listen to port 80 and 443 for http and https connecti
 
 ## How it works
 
-The container has [docker-gen](https://github.com/jwilder/docker-gen) installed, which listens to the Docker socket for changes of containers.
+The container has [docker-gen](https://github.com/ocean/docker-gen) installed, which listens to the Docker socket for changes of containers.
 
 Every container that has an environment variable `AMAZEEIO` set, docker-gen will generate from the template (haproxy.tmpl)[./haproxy.tmpl] and haproxy config and restart the haproxy.
 
