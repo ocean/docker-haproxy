@@ -5,11 +5,11 @@ RUN apk update && apk --no-cache add bash
 ARG DOCKER_GEN_VERSION_ARG=0.7.5-rc2
 ENV DOCKER_GEN_VERSION $DOCKER_GEN_VERSION_ARG
 
-ARG OS_ARG=linux
-ENV OS $OS_ARG
+ARG TARGETOS
+ENV OS=$TARGETOS
 
-ARG ARCH_ARG=amd64
-ENV ARCH $ARCH_ARG
+ARG TARGETARCH
+ENV ARCH=$TARGETARCH
 
 ADD https://github.com/ocean/docker-gen/releases/download/$DOCKER_GEN_VERSION/docker-gen-$OS-$ARCH-$DOCKER_GEN_VERSION.tar.gz /tmp/docker-gen.tar.gz
 
