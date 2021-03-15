@@ -2,7 +2,7 @@ FROM haproxy:1.7-alpine
 
 RUN apk update && apk --no-cache add bash
 
-ARG DOCKER_GEN_VERSION_ARG=0.7.5-rc1
+ARG DOCKER_GEN_VERSION_ARG=0.7.5-rc2
 ENV DOCKER_GEN_VERSION $DOCKER_GEN_VERSION_ARG
 
 ARG OS_ARG=linux
