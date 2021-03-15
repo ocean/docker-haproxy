@@ -16,7 +16,7 @@ By default this Image will listen to port 80 and 443 for http and https connecti
 
 ## How it works
 
-The container has [docker-gen](https://github.com/jwilder/docker-gen) installed, which listens to the Docker socket for changes of containers.
+The container has [docker-gen](https://github.com/ocean/docker-gen) installed, which listens to the Docker socket for changes of containers. The included [docker-gen](https://github.com/ocean/docker-gen) is an updated version of the original [`docker-gen` by jwilder](https://github.com/jwilder/docker-gen), with Go cross-compiled versions made available so it can run on different architectures.
 
 Every container that has an environment variable `AMAZEEIO` set, docker-gen will generate from the template (haproxy.tmpl)[./haproxy.tmpl] and haproxy config and restart the haproxy.
 
